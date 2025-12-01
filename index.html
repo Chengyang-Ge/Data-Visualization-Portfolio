@@ -217,4 +217,233 @@
       text-decoration: none;
       color: var(--accent);
       padding: 0.25rem 0.6rem;
-      border-radi
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(56,189,248,0.5);
+    }
+    .card-links a:hover {
+      background: rgba(56,189,248,0.2);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.35rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid #1f2937;
+      color: var(--muted);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      border-radius: 1.25rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #020617;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .meta-list {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding-left: 1.1rem;
+    }
+
+    .meta-list li + li {
+      margin-top: 0.35rem;
+    }
+
+    footer {
+      border-top: 1px solid #020617;
+      padding: 1.25rem 1.25rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: #020617;
+    }
+
+    @media (max-width: 720px) {
+      .nav { padding-inline: 1rem; }
+      .nav-links { display: none; } /* simple mobile behavior */
+      .hero { padding: 1.5rem 1.25rem; }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">DATA VISUALIZATION · PORTFOLIO</div>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#video">Video</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <h1 class="hero-title">Data Visualization Portfolio · Chengyang Ge</h1>
+      <p class="hero-sub">
+        This portfolio showcases selected work in
+        <strong>data visualization, dashboards, infographics, and analytical storytelling</strong>.
+        All visuals are based on real or openly available datasets (e.g., Kaggle, public open data, course datasets).
+      </p>
+      <p class="hero-sub">
+        Tools used include: Python (Pandas, Matplotlib, Seaborn, Plotly), Tableau, Power BI, and Figma.
+      </p>
+      <div class="hero-tags">
+        <span class="chip chip-accent">Exploratory Data Analysis</span>
+        <span class="chip">Storytelling with Data</span>
+        <span class="chip">Dashboard Design</span>
+        <span class="chip">Infographics</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">PROJECTS</h2>
+        <p class="section-desc">
+          Each card represents one visualization project with a thumbnail, short description, and links to reports or slides.
+        </p>
+      </div>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <article class="card">
+          <!-- If you later add a thumbnail image, replace src and remove the comment marks -->
+          <!-- <img src="images/project1.png" alt="Project 1 thumbnail" class="card-thumb" /> -->
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Assignment 1 · Data Visualization Project</h3>
+              <span class="card-label">Assignment 1</span>
+            </div>
+            <div class="card-meta">Coursework · Data Visualization</div>
+            <p class="card-desc">
+              A course assignment focused on building clear, well-structured visualizations and explaining key insights from the data.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Course Project</span>
+              <span class="tag">Visualization</span>
+            </div>
+            <div class="card-links">
+              <a href="reports/Assignment_1.pdf" target="_blank">
+                View Assignment 1 (PDF)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <!-- <img src="images/project2.png" alt="Project 2 thumbnail" class="card-thumb" /> -->
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Assignment 2 · Presentation Slides</h3>
+              <span class="card-label">Assignment 2</span>
+            </div>
+            <div class="card-meta">Slides · Presentation</div>
+            <p class="card-desc">
+              A slide deck used to present the main findings and visualizations, designed to communicate results to a non-technical audience.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Slides</span>
+              <span class="tag">Storytelling</span>
+            </div>
+            <div class="card-links">
+              <a href="reports/Assignment_2.pptx" target="_blank">
+                View Assignment 2 Slides (PPTX)
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card">
+          <!-- <img src="images/project3.png" alt="Project 3 thumbnail" class="card-thumb" /> -->
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3 class="card-title">Assignment 3 · Final Report</h3>
+              <span class="card-label">Assignment 3</span>
+            </div>
+            <div class="card-meta">Final Report · Data Story</div>
+            <p class="card-desc">
+              A written report that combines visualizations with narrative explanation, summarizing the overall analysis and recommendations.
+            </p>
+            <div class="tag-row">
+              <span class="tag">Final Report</span>
+              <span class="tag">Data Story</span>
+            </div>
+            <div class="card-links">
+              <a href="reports/Assignment-3.pdf" target="_blank">
+                View Assignment 3 (PDF)
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- YouTube video -->
+    <section class="section" id="video">
+      <div class="section-header">
+        <h2 class="section-title">VIDEO</h2>
+        <p class="section-desc">
+          The video below is a published data visualization / storytelling piece hosted on YouTube.
+        </p>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/8DWx8UcO1ww"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- About this portfolio -->
+    <section class="section">
+      <div class="section-header">
+        <h2 class="section-title">ABOUT THIS PORTFOLIO</h2>
+        <p class="section-desc">
+          A brief note for instructors, recruiters, or collaborators who want to understand the context and workflow.
+        </p>
+      </div>
+      <ul class="meta-list">
+        <li>Data sources: Kaggle datasets, open data portals, and course-provided datasets.</li>
+        <li>Visualization tools: Python (Pandas, Matplotlib, Seaborn, Plotly), Power BI, Tableau, and Figma.</li>
+        <li>For each assignment, I can share the original notebooks, data-cleaning scripts, and high-resolution exports on request.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Chengyang Ge · Data Visualization Portfolio
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

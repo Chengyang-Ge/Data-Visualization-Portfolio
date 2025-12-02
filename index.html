@@ -146,10 +146,11 @@
       color: var(--muted);
     }
 
+    /* 改这里：大屏两列 */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(2, minmax(320px, 1fr));
+      gap: 1.75rem;
     }
 
     .card {
@@ -186,7 +187,7 @@
     }
     .card-title {
       margin: 0;
-      font-size: 1rem;
+      font-size: 0.95rem; /* 稍微调小一点，让长标题尽量一行 */
       font-weight: 600;
     }
     .card-label {
@@ -275,13 +276,17 @@
       background: #020617;
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 800px) {
       .nav { padding-inline: 1rem; }
       .nav-links { display: none; } /* simple mobile behavior */
       .hero { padding: 1.5rem 1.25rem; }
       .section-header {
         flex-direction: column;
         align-items: flex-start;
+      }
+      /* 小屏改回一列 */
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -356,8 +361,6 @@
 
         <!-- Project 1 -->
         <article class="card">
-          <!-- If you later add a thumbnail image, replace src and remove the comment marks -->
-          <!-- <img src="images/project1.png" alt="Project 1 thumbnail" class="card-thumb" /> -->
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">Assignment 1 · Animation vs Calories</h3>
@@ -384,7 +387,6 @@
 
         <!-- Project 2 -->
         <article class="card">
-          <!-- <img src="images/project2.png" alt="Project 2 thumbnail" class="card-thumb" /> -->
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">Assignment 2 · Redesign a Notable Information Graphic</h3>
@@ -411,7 +413,6 @@
 
         <!-- Project 3 -->
         <article class="card">
-          <!-- <img src="images/project3.png" alt="Project 3 thumbnail" class="card-thumb" /> -->
           <div class="card-body">
             <div class="card-title-row">
               <h3 class="card-title">Assignment 3 · Trend of Canada's Fertility Rate</h3>
